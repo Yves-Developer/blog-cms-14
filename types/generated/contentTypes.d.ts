@@ -446,6 +446,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
     author: Schema.Attribute.Relation<'manyToOne', 'api::author.author'>;
     category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
     Content: Schema.Attribute.Blocks;
+    ContentMd: Schema.Attribute.RichText;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -459,6 +460,7 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Views: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
   };
 }
 

@@ -41,6 +41,13 @@
       "relation": "manyToOne",
       "target": "api::category.category",
       "inversedBy": "posts"
+    },
+    "Views": {
+      "type": "integer",
+      "default": 0
+    },
+    "ContentMd": {
+      "type": "richtext"
     }
   }
 }
